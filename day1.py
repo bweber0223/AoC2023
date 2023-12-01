@@ -10,9 +10,12 @@ class DayOne(ABC):
         print(f"Answer: {self.process()}")
 
     def process(self):
-        digits_per_line = self.get_digits_per_line()
-        calibrations = self.get_calibrations(digits_per_line)
+        calibrations = self.get_calibrations()
         return sum(calibrations)
+    
+    def get_calibrations(self):
+        digit_lines = self.get_digits_per_line()
+        return [digit_line[0] * 10 + digit_line[-1] for digit_line in digit_lines]
     
     def get_digits_per_line(self):
         return [
@@ -30,9 +33,6 @@ class DayOne(ABC):
     @abstractmethod
     def parse(self, line, i):
         pass
-
-    def get_calibrations(self, digit_lines):
-        return [digit_line[0] * 10 + digit_line[-1] for digit_line in digit_lines]
 
     def get_lines(self, filename):
         with open(filename, "r") as f:
