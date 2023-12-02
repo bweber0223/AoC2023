@@ -15,13 +15,10 @@ class PartTwo(DayTwo):
     def partition_by_color(self, game):
         partition = defaultdict(list)
         for round in game.rounds:
-            if round.red != 0:
-                partition["red"].append(round.red)
-            if round.blue != 0:
-                partition["blue"].append(round.blue)
-            if round.green != 0:
-                partition["green"].append(round.green)
+            partition["red"].append(round.red)
+            partition["blue"].append(round.blue)
+            partition["green"].append(round.green)
         return partition
-    
+
 part2 = PartTwo()
 part2.main()
