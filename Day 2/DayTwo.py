@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class DayTwo:
+class DayTwo(ABC):
     def main(self):
         filename = input("Input file: ")
         lines = self.get_lines(filename)
