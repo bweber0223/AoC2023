@@ -44,7 +44,6 @@ class Board:
                 ratios.append(self.get_gear_ratio(i, j))
         return ratios
 
-
     def get_gear_ratio(self, row, col):
         if self.lines[row][col] != "*":
             return 0
