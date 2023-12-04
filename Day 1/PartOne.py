@@ -1,4 +1,4 @@
-from day1 import DayOne
+from DayOne import DayOne
 
 class PartOne(DayOne):
     def parse(self, line, i):

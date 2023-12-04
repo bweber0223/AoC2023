@@ -1,4 +1,4 @@
-from day1 import DayOne
+from DayOne import DayOne
 
 class PartTwo(DayOne):
     def __init__(self):
